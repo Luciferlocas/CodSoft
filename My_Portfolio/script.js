@@ -1,9 +1,13 @@
+//loading percentage
+
 CSS.registerProperty({
   name: "--p",
   syntax: "<integer>",
   initialValue: 0,
   inherits: true,
 });
+
+// loading page visibility
 
 document.onreadystatechange = function () {
   if (document.readyState !== "complete") {
@@ -15,6 +19,8 @@ document.onreadystatechange = function () {
     document.querySelector("body").style.visibility = "visible";
   }
 };
+
+//typing subheading
 
 var typingEffect = new Typed(".typo", {
   strings: ["Front End Developer ^_^", "Competitive Programmer *_^"],

@@ -1,0 +1,679 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 130px;
+}
+
+body {
+  background-image: url(assets/img/background.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+/*loader*/
+
+body.load-container {
+  font-family: "Montserrat", sans-serif;
+  background: black;
+  text-align: center;
+}
+
+.load-container {
+  margin: 100px auto;
+  margin-top: 300px;
+  width: 300px;
+  text-align: center;
+  position: relative;
+}
+
+.progress2 {
+  border-radius: 50px;
+  background-color: #0a0a0a;
+}
+
+.progress-bar2 {
+  height: 0.08px;
+  border-radius: 50px;
+  transition: 0.6s linear;
+  transition-property: width, background-color;
+}
+
+.progress-moved .progress-bar2 {
+  background-color: #16f6f6;
+  animation: progress 5s;
+}
+
+@keyframes progress {
+  0% {
+    width: 0%;
+    background: aliceblue;
+  }
+  100% {
+    width: 100%;
+    background: #16f6f6;
+    box-shadow: 0 0 40px rgb(245, 202, 129);
+  }
+}
+
+.icon {
+  color: aliceblue;
+  animation: icon 5s;
+  background-color: transparent;
+  padding-right: 400px;
+  padding-bottom: 7px;
+}
+
+@keyframes icon {
+  0% {
+    opacity: 0.05;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.loader {
+  --p: 0;
+  animation: p 9.5s steps(100);
+  counter-reset: p var(--p);
+  font-size: 10px;
+  position: absolute;
+  top: 62px;
+  left: 275px;
+  color: aliceblue;
+}
+
+.loader:after {
+  content: counter(p) "%";
+}
+
+@keyframes p {
+  50%,
+  100% {
+    --p: 100;
+  }
+}
+
+/*loader end*/
+
+/*nav-bar css*/
+
+.nav-bar {
+  margin-top: 35px;
+  margin-left: 75px;
+  margin-right: 75px;
+  height: 75px;
+  background-color: aliceblue;
+  display: flex;
+  align-items: center;
+  border-radius: 20px;
+  box-shadow: 0 15px 20px rgba(0, 0, 0, 0.4);
+}
+
+.menu {
+  flex: 1;
+  font-size: 19px;
+  list-style-type: none;
+  background-color: aliceblue;
+}
+
+.nav-bar ul {
+  text-align: center;
+}
+
+.nav-bar ul li {
+  display: inline-block;
+  margin-right: 50px;
+  background-color: aliceblue;
+}
+
+.nav-bar ul li a {
+  text-decoration: none;
+  color: black;
+  background-color: aliceblue;
+  font-family: "Raleway";
+  font-weight: 600;
+}
+
+.nav-bar ul li:hover {
+  font-size: 17px;
+  text-shadow: 0 0 5px rgb(245, 202, 129), 0 0 25px rgb(245, 202, 129),
+    0 0 50px #4d494e, 0 0 100px #4d494e;
+}
+
+.logo {
+  text-decoration: none;
+  color: black;
+  background-color: aliceblue;
+}
+
+.nav-bar a img {
+  margin-left: 35px;
+  padding-right: 35px;
+  display: grid;
+  text-decoration: none;
+  height: 45px;
+  background-color: aliceblue;
+}
+
+.nav-bar a h1:hover {
+  font-size: 42px;
+  text-shadow: 0 0 25px rgb(245, 202, 129), 0 0 25px rgb(245, 202, 129),
+    0 0 50px rgb(245, 202, 129), 0 0 50px rgb(245, 202, 129);
+}
+
+.profile {
+  background-color: aliceblue;
+}
+
+.profile a {
+  text-decoration: none;
+}
+
+.profile a img {
+  height: 30px;
+  background-color: aliceblue;
+  padding-right: 35px;
+  border-radius: 5px;
+}
+
+.profile a img:hover {
+  height: 28px;
+}
+
+/*nav-bar css end*/
+
+/*intro css*/
+
+.greet {
+  width: 50%;
+  margin: auto;
+  align-items: center;
+  display: flex;
+  margin-top: 200px;
+  margin-bottom: 200px;
+}
+
+.hello h1 {
+  font-size: 55px;
+  letter-spacing: 3px;
+  font-family: "Sedgwick Ave Display", cursive;
+  color: #16f6f6;
+}
+
+.hello h2 {
+  font-size: 85px;
+  font-family: "Barriecito", cursive;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+  color: aliceblue;
+}
+
+.hello h4 {
+  font-size: 20px;
+  font-family: "Courier New", Courier, monospace;
+  color: rgb(245, 202, 129);
+}
+
+/*intro css end*/
+
+/*about css*/
+
+.about {
+  height: 390px;
+  width: 1200px;
+  margin-left: 160px;
+  background-image: url(assets/img/me.JPG);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: top right;
+  box-shadow: 0 15px 20px rgba(0, 0, 0, 0.4);
+  border-radius: 20px 20px 20px 20px;
+  margin-bottom: 50px;
+}
+
+.about p1 {
+  position: inherit;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 55px;
+  padding-left: 70px;
+}
+
+.about p {
+  text-align: left;
+  font-size: 21px;
+  font-family: Arial, Helvetica, sans-serif;
+  max-width: 1000px;
+  padding-left: 100px;
+  padding-top: 15px;
+  letter-spacing: 2px;
+  line-height: 30px;
+  color: aliceblue;
+}
+
+.link {
+  text-decoration: none;
+  color: #000;
+  font-family: "Whitney", sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  opacity: 0.7;
+  padding: 10px 20px;
+  margin-left: 850px;
+  border: 2px solid #000;
+  border-radius: 100px;
+}
+
+.link:hover {
+  opacity: 1;
+}
+
+.my-icon {
+  height: 25px;
+  width: 25px;
+  padding-right: 20px;
+  padding-bottom: 10px;
+  padding-top: 5px;
+}
+
+.about hr {
+  width: 30%;
+  border-color: black;
+  border-top: 1px solid black;
+}
+
+.about h1 {
+  padding-left: 160px;
+}
+
+/*about css end*/
+
+/*project css*/
+
+.project-about {
+  display: flex;
+  margin-bottom: 200px;
+}
+
+.project h1 {
+  text-align: center;
+  font-size: 35px;
+  letter-spacing: 3px;
+  font-family: "Lilita One", cursive;
+  color: #16f6f6;
+  margin-top: 200px;
+  padding-bottom: 60px;
+}
+
+.proj a img {
+  margin-left: 150px;
+  height: 450px;
+  width: 450px;
+  border-radius: 40px;
+}
+
+.proj h3 a {
+  text-decoration: none;
+  margin-left: 250px;
+  font-size: 35px;
+  letter-spacing: 4px;
+  font-family: "Lilita One", cursive;
+  color: rgb(245, 202, 129);
+}
+
+.about-proj {
+  max-width: 650px;
+  color: aliceblue;
+  font-size: 30px;
+  letter-spacing: 1px;
+  line-height: 50px;
+  padding-left: 100px;
+  padding-top: 70px;
+  text-align: left;
+}
+
+/*project css end*/
+
+/*skills css*/
+
+.skills {
+  width: 500px;
+  margin: 60px auto;
+  list-style: none;
+}
+
+.skills h1 {
+  text-align: center;
+  font-size: 35px;
+  letter-spacing: 3px;
+  font-family: "Lilita One", cursive;
+  color: #16f6f6;
+  margin-top: 200px;
+  padding-bottom: 50px;
+}
+
+.skills li {
+  margin: 40px 0;
+  font-family: "Lilita One", cursive;
+  color: aliceblue;
+  text-align: left;
+}
+
+.bar {
+  background: #353b48;
+  display: block;
+  height: 2px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 3px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgb(245, 202, 129);
+}
+
+.bar span {
+  height: 2px;
+  float: left;
+  background: #16f6f6;
+}
+
+.html {
+  width: 90%;
+  animation: html 2s;
+}
+
+.css {
+  width: 68%;
+  animation: css 2s;
+}
+
+.java {
+  width: 55%;
+  animation: java 2s;
+}
+
+.javascript {
+  width: 33%;
+  animation: javascript 2s;
+}
+
+.adobe {
+  width: 25%;
+  animation: adobe 2s;
+}
+
+@keyframes html {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 90%;
+  }
+}
+
+@keyframes css {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 68%;
+  }
+}
+
+@keyframes java {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 55%;
+  }
+}
+
+@keyframes javascript {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 33%;
+  }
+}
+
+@keyframes adobe {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 25%;
+  }
+}
+
+/*skills css end*/
+
+/*hire me css*/
+
+.hire-me {
+  margin-left: 100px;
+  margin-right: 100px;
+  height: 85px;
+  background-color: aliceblue;
+  display: flex;
+  align-items: center;
+  border-radius: 20px;
+  box-shadow: 0 15px 20px rgba(0, 0, 0, 0.4);
+  margin-top: 200px;
+  margin-bottom: 200px;
+}
+
+.ask h1 {
+  font-family: "Lilita One", cursive;
+  font-size: 30px;
+  padding-left: 85px;
+}
+
+.ask h3 {
+  padding-left: 85px;
+  font-family: "Raleway";
+  font-size: 19px;
+  letter-spacing: 2px;
+}
+
+.hire a {
+  text-decoration: none;
+  color: #000;
+  font-family: "Whitney", sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  opacity: 0.7;
+  padding: 10px 20px;
+  margin-left: 700px;
+  border: 2px solid #000;
+  border-radius: 100px;
+}
+
+.hire a:hover {
+  opacity: 1;
+  text-shadow: 0 0 5px rgb(245, 202, 129), 0 0 25px rgb(245, 202, 129),
+    0 0 50px #4d494e, 0 0 100px #4d494e;
+}
+
+/*hire me css end*/
+
+/*contact me css*/
+
+.row {
+  margin: -20px 0;
+  .col {
+    padding: 0 20px;
+    float: left;
+    box-sizing: border-box;
+    &.x-50 {
+      width: 50%;
+    }
+    &.x-100 {
+      width: 100%;
+    }
+  }
+}
+
+.get-in-touch {
+  max-width: 650px;
+  margin: 0 auto;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-bottom: 200px;
+}
+
+.contact-form {
+  .form-field {
+    position: relative;
+    margin: 32px 0;
+  }
+  .input-text {
+    display: block;
+    width: 100%;
+    height: 36px;
+    border-radius: 50px;
+    padding-left: 15px;
+    background-color: aliceblue;
+    border-width: 0 0 2px 0;
+    border-color: aliceblue;
+    font-family: "Raleway", sans-serif;
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: 600;
+    text-shadow: 0 0 5px rgb(245, 202, 129), 0 0 25px rgb(245, 202, 129),
+      0 0 50px #4d494e, 0 0 100px #4d494e;
+
+    &:focus,
+    &.not-empty {
+      + .label {
+        transform: translateY(-33px);
+        color: aliceblue;
+      }
+    }
+  }
+  .msg {
+    height: 100px;
+    top: 7px;
+  }
+  .label {
+    position: absolute;
+    left: 40px;
+    bottom: 7px;
+    font-family: "Lilita One", cursive;
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: 600;
+    color: #000;
+    letter-spacing: 1px;
+    cursor: text;
+    transition: transform 0.2s ease-in-out;
+  }
+
+  .submit-btn {
+    display: inline-block;
+    background-color: transparent;
+    color: aliceblue;
+    font-family: "Raleway", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 16px;
+    line-height: 24px;
+    padding: 8px 16px;
+    width: 625px;
+    border: 2px solid aliceblue;
+    border-radius: 100px;
+    cursor: pointer;
+  }
+
+  .submit-btn:hover {
+    background-color: aliceblue;
+    color: #000;
+    font-weight: 800;
+  }
+}
+
+/*contact me css end*/
+
+/*hr css*/
+
+.mover {
+  border: none;
+  height: 15px;
+  width: 85%;
+  height: 50px;
+  margin-top: 0;
+  border-bottom: 1px solid aliceblue;
+  box-shadow: 10px 20px 20px -20px #8c8b8b;
+  margin: -50px auto 10px;
+}
+
+/*hr css end*/
+
+/*copyright css*/
+
+.copy-bar {
+  margin-top: 35px;
+  margin-left: 75px;
+  margin-right: 75px;
+  margin-bottom: 30px;
+  height: 165px;
+  background-color: aliceblue;
+  display: flex;
+  align-items: center;
+  border-radius: 20px;
+  box-shadow: 0 15px 20px rgba(0, 0, 0, 0.4);
+}
+
+.left {
+  background-color: aliceblue;
+  font-family: "Raleway";
+  font-weight: 600;
+  padding-left: 45px;
+  font-size: 21px;
+}
+
+.right {
+  margin-left: 560px;
+}
+
+.right a {
+  text-decoration: none;
+  color: black;
+  background-color: aliceblue;
+  font-family: "Raleway";
+  font-weight: 600;
+  font-size: 21px;
+}
+
+.pro,
+.phone,
+.location {
+  display: flex;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.link-icon {
+  padding-right: 20px;
+}
+
+.copy-bar img {
+  height: 30px;
+}
+
+.pro a img {
+  margin-right: 30px;
+}
+
+.pro a img:hover {
+  height: 32px;
+}
+
+/*copyright css end*/

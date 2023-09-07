@@ -623,12 +623,11 @@ body.load-container {
   margin-left: 75px;
   margin-right: 75px;
   margin-bottom: 30px;
-  height: 165px;
+  height: 170px;
   background-color: aliceblue;
   display: flex;
   align-items: center;
   border-radius: 20px;
-  box-shadow: 0 15px 20px rgba(0, 0, 0, 0.4);
 }
 
 .left {
@@ -640,7 +639,7 @@ body.load-container {
 }
 
 .right {
-  margin-left: 560px;
+  margin-left: 680px;
 }
 
 .right a {

@@ -5,7 +5,7 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 130px;
+  scroll-padding-top: 100px;
 }
 
 body {
@@ -15,92 +15,6 @@ body {
   background-attachment: fixed;
   background-position: center;
 }
-
-/*loader*/
-
-body.load-container {
-  font-family: "Montserrat", sans-serif;
-  background: black;
-  text-align: center;
-}
-
-.load-container {
-  margin: 100px auto;
-  margin-top: 300px;
-  width: 300px;
-  text-align: center;
-  position: relative;
-}
-
-.progress2 {
-  border-radius: 50px;
-  background-color: #0a0a0a;
-}
-
-.progress-bar2 {
-  height: 0.08px;
-  border-radius: 50px;
-  transition: 0.6s linear;
-  transition-property: width, background-color;
-}
-
-.progress-moved .progress-bar2 {
-  background-color: #16f6f6;
-  animation: progress 5s;
-}
-
-@keyframes progress {
-  0% {
-    width: 0%;
-    background: aliceblue;
-  }
-  100% {
-    width: 100%;
-    background: #16f6f6;
-    box-shadow: 0 0 40px rgb(245, 202, 129);
-  }
-}
-
-.icon {
-  color: aliceblue;
-  animation: icon 5s;
-  background-color: transparent;
-  padding-right: 400px;
-  padding-bottom: 7px;
-}
-
-@keyframes icon {
-  0% {
-    opacity: 0.05;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-.loader {
-  --p: 0;
-  animation: p 9.5s steps(100);
-  counter-reset: p var(--p);
-  font-size: 10px;
-  position: absolute;
-  top: 62px;
-  left: 275px;
-  color: aliceblue;
-}
-
-.loader:after {
-  content: counter(p) "%";
-}
-
-@keyframes p {
-  50%,
-  100% {
-    --p: 100;
-  }
-}
-
-/*loader end*/
 
 /*nav-bar css*/
 
@@ -299,7 +213,6 @@ body.load-container {
 
 .project-about {
   display: flex;
-  margin-bottom: 200px;
 }
 
 .project h1 {
@@ -337,6 +250,27 @@ body.load-container {
   padding-left: 100px;
   padding-top: 70px;
   text-align: left;
+}
+
+.gitpro{
+  margin-top: 50px;
+}
+
+.gitpro a{
+  text-decoration: none;
+  color: #fff;
+  font-family: "Whitney", sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  padding: 10px 20px;
+  border: 2px solid #fff;
+  border-radius: 100px;
+}
+
+.gitpro a:hover{
+  color: #000;
+  background-color: #fff;
 }
 
 /*project css end*/
